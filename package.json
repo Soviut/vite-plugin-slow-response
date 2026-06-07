@@ -2,7 +2,24 @@
   "name": "vite-plugin-slow-response",
   "version": "0.0.1",
   "description": "A Vite plugin that simulates slow responses from the dev server.",
-  "main": "./dist/index.js",
+  "homepage": "https://github.com/Soviut/vite-plugin-slow-response#readme",
+  "bugs": {
+    "url": "https://github.com/Soviut/vite-plugin-slow-response/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soviut/vite-plugin-slow-response.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/vite-plugin-slow-response.d.ts",
+      "import": "./dist/vite-plugin-slow-response.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier --write .",
@@ -20,6 +37,13 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.8.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite": "^8.0.0"
+  },
+  "peerDependencies": {
+    "vite": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
