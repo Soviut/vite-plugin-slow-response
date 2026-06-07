@@ -30,8 +30,7 @@
     "vite-plugin",
     "dev-server",
     "response",
-    "slow",
-    "test"
+    "slow"
   ],
   "author": "Ian Zamojc",
   "license": "MIT",
