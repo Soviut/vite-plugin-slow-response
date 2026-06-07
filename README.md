@@ -14,6 +14,9 @@ npm install vite-plugin-slow-response --save-dev
 
 ## Usage
 
+> [!NOTE]
+> The plugin only affects requests to the Vite dev server. It does not affect production builds.
+
 Add the following to your `vite.config.ts` file.
 
 <!-- prettier-ignore-start -->
@@ -58,9 +61,6 @@ export default defineConfig({
 })
 ```
 <!-- prettier-ignore-end -->
-
-> [!NOTE]
-> The plugin only affects requests to the Vite dev server. It does not affect production builds.
 
 ## Options
 
