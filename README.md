@@ -62,6 +62,18 @@ export default defineConfig({
 ```
 <!-- prettier-ignore-end -->
 
+Disable the plugin by setting the delay to 0. This completely bypasses the middleware creation, so there is no performance overhead:
+
+<!-- prettier-ignore-start -->
+```ts
+export default defineConfig({
+  plugins: [
+    slowResponse('/', 0)
+  ],
+})
+```
+<!-- prettier-ignore-end -->
+
 ## Options
 
 | Option  | Type     | Default | Description                                            |
