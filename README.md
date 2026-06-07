@@ -6,9 +6,6 @@
 
 A Vite plugin that simulates slow responses from the dev server.
 
-> [!NOTE]
-> The plugin only affects requests to the Vite dev server. It does not affect production builds.
-
 ## Installation
 
 ```bash
@@ -61,6 +58,9 @@ export default defineConfig({
 })
 ```
 <!-- prettier-ignore-end -->
+
+> [!NOTE]
+> The plugin only affects requests to the Vite dev server. It does not affect production builds.
 
 ## Options
 
