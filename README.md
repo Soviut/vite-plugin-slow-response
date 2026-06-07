@@ -1,5 +1,9 @@
 # Vite Plugin Slow Response
 
+[![npm version](https://img.shields.io/npm/v/vite-plugin-slow-response)](https://www.npmjs.com/package/vite-plugin-slow-response)
+[![npm downloads](https://img.shields.io/npm/dm/vite-plugin-slow-response)](https://www.npmjs.com/package/vite-plugin-slow-response)
+[![license](https://img.shields.io/npm/l/vite-plugin-slow-response)](./LICENSE)
+
 A Vite plugin that simulates slow responses from the dev server.
 
 > [!NOTE]
