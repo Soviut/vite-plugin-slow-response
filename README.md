@@ -2,6 +2,9 @@
 
 A Vite plugin that simulates slow responses from the dev server.
 
+> [!NOTE]
+> The plugin only affects requests to the Vite dev server. It does not affect production builds.
+
 ## Installation
 
 ```bash
@@ -14,20 +17,50 @@ Add the following to your `vite.config.ts` file.
 
 <!-- prettier-ignore-start -->
 ```ts
-import { defineConfig } from "vite";
-import slowResponse from "vite-plugin-slow-response";
+import { defineConfig } from 'vite'
+import slowResponse from 'vite-plugin-slow-response'
 
 export default defineConfig({
   plugins: [
-    slowResponse("/api", 2000)
+    slowResponse('/api', 2000)
   ],
-});
+})
 ```
 <!-- prettier-ignore-end -->
 
-In this example, any request to `/api` will be delayed by 2000 milliseconds.
+Any request to `/api` will be delayed by 2000 milliseconds.
+
+> [!TIP]
+> This will work with Vite dev server [proxies](https://vitejs.dev/config/server-options.html#server-proxy).
+
+Multiple paths can be specified by calling the plugin multiple times.
+
+<!-- prettier-ignore-start -->
+```ts
+export default defineConfig({
+  plugins: [
+    slowResponse('/api', 2000),
+    slowResponse('/auth/login', 1000)
+  ],
+})
+```
+<!-- prettier-ignore-end -->
+
+To simulate slow responses for all requests:
+
+<!-- prettier-ignore-start -->
+```ts
+export default defineConfig({
+  plugins: [
+    slowResponse('/', 2000)
+  ],
+})
+```
+<!-- prettier-ignore-end -->
 
 ## Options
 
-- `path`: The path to match for slow responses. This can be a string or a regular expression.
-- `delay`: The delay in milliseconds before the response is sent.
+| Option  | Type     | Default | Description                                            |
+| ------- | -------- | ------- | ------------------------------------------------------ |
+| `path`  | `string` |         | The path to match for slow responses.                  |
+| `delay` | `number` | `0`     | The delay in milliseconds before the response is sent. |
