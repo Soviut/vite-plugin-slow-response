@@ -1,4 +1,5 @@
 {
+  "exclude": ["src/**/*.test.ts", "dist"],
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
